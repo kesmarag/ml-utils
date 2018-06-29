@@ -2,14 +2,15 @@ import numpy as np
 
 
 class DataSet(object):
-  def __init__(self, data):
+  def __init__(self, data, shuffle=True):
     self._data = self._auto_expand(data)
     self._num_examples = self._data.shape[0]
     self._index_in_epoch = 0
     # Shuffle the data
-    perm = np.arange(self._num_examples)
-    np.random.shuffle(perm)
-    self._data = self._data[perm]
+    if shuffle:
+      perm = np.arange(self._num_examples)
+      np.random.shuffle(perm)
+      self._data = self._data[perm]
 
   @property
   def num_examples(self):

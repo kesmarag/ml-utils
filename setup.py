@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='kesmarag-ml-utils',
-      version='0.0.1',
+      version='0.0.2',
       description='Machine learning utilities',
       author='Costas Smaragdakis',
       author_email='kesmarag@gmail.com',
